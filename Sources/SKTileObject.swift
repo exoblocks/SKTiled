@@ -326,7 +326,7 @@ open class SKTileObject: SKShapeNode, SKTiledObject {
     }
 
     /// Returns the bounding box of the shape.
-    open var bounds: CGRect {
+    override open var bounds: CGRect {
         return CGRect(x: 0, y: 0, width: size.width, height: -size.height)
     }
 

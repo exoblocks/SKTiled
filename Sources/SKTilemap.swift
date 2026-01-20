@@ -293,8 +293,14 @@ public class SKTilemap: SKEffectNode, SKTiledObject {
     /// Indicates map should auto-resize upon view changes.
     public internal(set) var autoResize: Bool = false
 
+    /// Map bounds backing storage.
+    private var _mapBounds: CGRect = .zero
+
     /// Map bounds.
-    public var bounds: CGRect = CGRect.zero
+    override public var bounds: CGRect {
+        get { return _mapBounds }
+        set { _mapBounds = newValue }
+    }
 
     /// Receive notifications from camera.
     public var receiveCameraUpdates: Bool = true

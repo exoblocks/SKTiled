@@ -105,10 +105,16 @@ public class SKTiledSceneCamera: SKCameraNode {
     
     /// World container node.
     unowned let world: SKNode
-    
+
+    /// Camera bounds backing storage.
+    private var _cameraBounds: CGRect = .zero
+
     /// Camera bounds.
-    internal var bounds: CGRect
-    
+    override internal var bounds: CGRect {
+        get { return _cameraBounds }
+        set { _cameraBounds = newValue }
+    }
+
     /// Camera observers.
     internal var delegates: [SKTiledSceneCameraDelegate] = []
     

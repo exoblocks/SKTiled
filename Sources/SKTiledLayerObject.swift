@@ -319,7 +319,7 @@ public class SKTiledLayerObject: SKEffectNode, SKTiledObject {
     }
     
     /// Returns the frame rectangle of the layer (used to draw bounds).
-    public var bounds: CGRect {
+    override public var bounds: CGRect {
         return CGRect(x: 0, y: 0, width: sizeInPoints.width, height: -sizeInPoints.height)
     }
     
