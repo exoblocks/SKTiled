@@ -110,7 +110,7 @@ public class SKTiledSceneCamera: SKCameraNode {
     private var _cameraBounds: CGRect = .zero
 
     /// Camera bounds.
-    override internal var bounds: CGRect {
+    override public var bounds: CGRect {
         get { return _cameraBounds }
         set { _cameraBounds = newValue }
     }
