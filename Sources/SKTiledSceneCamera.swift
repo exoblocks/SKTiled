@@ -243,7 +243,7 @@ public class SKTiledSceneCamera: SKCameraNode {
      */
     public init(view: SKView, world node: SKNode) {
         world = node
-        bounds = view.bounds
+        _cameraBounds = view.bounds
         super.init()
         
         // add the overlay
